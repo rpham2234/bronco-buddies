@@ -1,5 +1,6 @@
 //main function
 //read from user funciton
+
 var listOfTasks = []; // stores our objects/tasks in a list
 var userAvailiableTimes = new Array(7).fill().map((i) => new Array(20).fill(0)); //2d array to have each row from monday to sunday
 var schedule = new Array(7).fill().map((i) => new Array(20).fill("Busy")); // stores objects
@@ -121,8 +122,9 @@ function priority() {
   }
   return;
 }
+
 function displayData() {
-  
+  return schedule;
   
 }
 
@@ -151,3 +153,7 @@ determineUserFreeTime(1, 10);
 determineUserFreeTime(1, 12);
 addTasksToDays();
 printAll();
+
+module.exports = {
+  displayData,
+};
