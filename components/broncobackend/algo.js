@@ -180,54 +180,43 @@ function printAll() {
 //repeat last two steps until user is satisfied with the schedule
 //give final schedule (optional)
 
-// readFromUser("mathhw", "Wednesday", 1, 3, 0);
-// readFromUser("ENGLISH", "Wednesday", 1, 2, 1);
-// readFromUser("TTQuiz", "Sunday", 2, 4, 2);
-// readFromUser("ECEN20Essay", "Thursday", 3, 3, 3);
-// readFromUser("StudyJapanese", "Sunday", 1, 5, 4);
-// readFromUser("ECEN21Quiz", "Monday", 2, 1, 5);
-// determineUserFreeTime(1, 1);
-// determineUserFreeTime(1, 3);
-// determineUserFreeTime(1, 4);
-// determineUserFreeTime(1, 5);
-// determineUserFreeTime(1, 8);
-// determineUserFreeTime(1, 12);
-// determineUserFreeTime(1, 13);
-// determineUserFreeTime(1, 15);
-// determineUserFreeTime(1, 16);
-// determineUserFreeTime(2, 1);
-// determineUserFreeTime(2, 3);
-// determineUserFreeTime(2, 4);
-// determineUserFreeTime(2, 5);
-// determineUserFreeTime(2, 8);
-// determineUserFreeTime(2, 12);
-// determineUserFreeTime(2, 13);
-// determineUserFreeTime(2, 15);
-// determineUserFreeTime(2, 16);
-// determineUserFreeTime(4, 1);
-// determineUserFreeTime(4, 3);
-// determineUserFreeTime(4, 4);
-// determineUserFreeTime(4, 5);
-// determineUserFreeTime(4, 8);
-// determineUserFreeTime(4, 12);
-// determineUserFreeTime(4, 13);
-// determineUserFreeTime(4, 15);
-// determineUserFreeTime(4, 16);
-// priority();
-// addTasksToDays();
-// printAll();
+readFromUser("mathhw", "Wednesday", 1, 3, 0);
+readFromUser("ENGLISH", "Wednesday", 1, 2, 1);
+readFromUser("TTQuiz", "Sunday", 2, 4, 2);
+readFromUser("ECEN20Essay", "Thursday", 3, 3, 3);
+readFromUser("StudyJapanese", "Sunday", 1, 5, 4);
+readFromUser("ECEN21Quiz", "Monday", 2, 1, 5);
+determineUserFreeTime(1, 1);
+determineUserFreeTime(1, 3);
+determineUserFreeTime(1, 4);
+determineUserFreeTime(1, 5);
+determineUserFreeTime(1, 8);
+determineUserFreeTime(1, 12);
+determineUserFreeTime(1, 13);
+determineUserFreeTime(1, 15);
+determineUserFreeTime(1, 16);
+determineUserFreeTime(2, 1);
+determineUserFreeTime(2, 3);
+determineUserFreeTime(2, 4);
+determineUserFreeTime(2, 5);
+determineUserFreeTime(2, 8);
+determineUserFreeTime(2, 12);
+determineUserFreeTime(2, 13);
+determineUserFreeTime(2, 15);
+determineUserFreeTime(2, 16);
+determineUserFreeTime(4, 1);
+determineUserFreeTime(4, 3);
+determineUserFreeTime(4, 4);
+determineUserFreeTime(4, 5);
+determineUserFreeTime(4, 8);
+determineUserFreeTime(4, 12);
+determineUserFreeTime(4, 13);
+determineUserFreeTime(4, 15);
+determineUserFreeTime(4, 16);
+priority();
+addTasksToDays();
+printAll();
 
 module.exports = {
   displayData,
 };
-
-fetch()
-  .then(response=> {
-
-    if (!response.ok){
-      throw new Error("Could not fetch resource");
-    }
-    return response.json();
-  })
-  .then(data =>console.log(data.(insertdatatyoe)))
-  .catch(error=>console.log.(error));
