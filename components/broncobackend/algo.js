@@ -1,9 +1,10 @@
 //main function
 //read from user funciton
 var listOfTasks = new Array(6).fill(null); // stores our objects/tasks in a list
-var userAvailiableTimes = new Array(7).fill().map((i) => new Array(20).fill(0)); //2d array to have each row from monday to sunday
+var userAvailiableTimes = new Array(7).fill().map((i) => new Array(24).fill(0)); //2d array to have each row from monday to sunday
 var schedule = new Array(7).fill().map((i) => new Array(20).fill(0)); // stores objects
 var today = 1; //single value for calc
+var days = 0; //array indexing
 
 // Monday = 1, Tuesday = 2, Wednesday = 3, Thursday = 4, Friday = 5, Saturday  = 6, Sunday = 7
 class Task {
@@ -163,9 +164,13 @@ function priority() {
   }
   return;
 }
-function displayData() {
+function displayData(arr) {
   
-  
+}
+
+function assignSchedules(arr) {
+  userAvailiableTimes[days] = arr;
+  days++;
 }
 
 function printAll() {

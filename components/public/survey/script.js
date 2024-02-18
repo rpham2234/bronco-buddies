@@ -12,4 +12,18 @@ document.addEventListener("DOMContentLoaded", function() {
       // You can use the 'value' variable for further processing
     });
   });
+
+  submitButton.addEventListener('click', function() {
+    console.log('Submit button clicked');
+    console.log('Checked array:', checked);
+    // Perform further processing with the 'checked' array
+    fetch(`/api?=${arr}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ checked: checked }) // send the checked array in the request body
+    })
+  });
 });
+
