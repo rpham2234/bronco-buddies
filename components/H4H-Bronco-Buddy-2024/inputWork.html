@@ -1,0 +1,71 @@
+<!-- input work for scheduling -->
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>bronco buddy: input work</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- link the webpage's stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+  <nav class="resultsNav">
+    <a href="index.html">home</a>
+  </nav>
+
+  <!-- schedule output section -->
+  <div class="schedule">
+    <div class="scheduleTitle">
+      <h1 id="title">input work: </h1>
+    </div>
+  </div>
+
+  <div class="inputs">
+    <!-- textbox for the assignment name -->
+    <p id="descriptions">enter your assignment's name: </p>
+    <label for="assignmentName">assignment name: </label>
+    <input type="text" id="assignmentName" name="assignmentName"> <br><br>
+
+    <!-- dropdown for the assignment types: tests/projects/essays, homework, quiz -->
+    <p id="descriptions">choose the assignment's type: </p>
+    <label for="assignmentType">assignment type:</label>
+    <select name="assignmentType" id="assignmentType">
+      <option value="none"></option>
+      <option value="homework">homework</option>
+      <option value="quiz">quiz</option>
+      <option value="project/test/essay">project/test/essay</option>
+    </select><br><br>
+
+    <!-- hours to complete -->
+    <p id="descriptions">hours assignment will take to complete: </p>
+    <label for="assignmentTime">hrs: </label>
+    <input type="number" step="1" min=0 id="assignmentTime" name="assignmentTime"> <br><br>
+  </div>
+
+  <!-- day assignment is due -->
+  <p id="descriptions">day assignment is due: </p>
+  <label for="assignmentDay">assignment due date:</label>
+  <select name="assignmentDay" id="assignmentDay">
+    <option value="none"></option>
+    <option value="monday">monday</option>
+    <option value="tuesday">tuesday</option>
+    <option value="wednesday">wednesday</option>
+    <option value="thursday">thursday</option>
+    <option value="friday">friday</option>
+    <option value="saturday">saturday</option>
+    <option value="sunday">sunday</option>
+  </select><br><br>
+
+  <div class="nextButton">
+    <a href="index.html">home</a>
+  </div>
+
+</body>
+
+</html>
