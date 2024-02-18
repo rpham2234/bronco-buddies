@@ -1,0 +1,14 @@
+{
+  "name": "bronco-buddies",
+  "version": "1.0.0",
+  "description": "time management bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express.js": "^1.0.0"
+  }
+}
