@@ -136,13 +136,30 @@ function priority() {
   //lets variable
   //nested for loop
   //bubble and sort to find highest priority i.e largest number to smallest
-  for (let i = 0; i < 7; i++) {
-    for (let j = 0; j < 20 - 1 - i; j++) {
+  var i, j, temp;
+  var n = 0;
+  var swapped;
+
+  while(listOfTasks[n] != null){
+    n++;
+  }
+
+  for (i = 0; i < n - 1; i++) {
+    swapped = false;
+    for (j = 0; j < n - i - 1; j++) {
       if (listOfTasks[j].importance < listOfTasks[j + 1].importance) {
-        [listOfTasks[j], listOfTasks[j + 1]] = [listOfTasks[j + 1], listOfTasks[j]];
-        console.log("sorting...");
+        // Swap arr[j] and arr[j+1]
+        temp = listOfTasks[j];
+        listOfTasks[j] = listOfTasks[j + 1];
+        listOfTasks[j + 1] = temp;
+        swapped = true;
       }
     }
+
+    // IF no two elements were 
+    // swapped by inner loop, then break
+    if (swapped == false)
+      break;
   }
   return;
 }
@@ -163,42 +180,42 @@ function printAll() {
 //repeat last two steps until user is satisfied with the schedule
 //give final schedule (optional)
 
-readFromUser("mathhw", "Wednesday", 1, 3, 0);
-readFromUser("ENGLISH", "Wednesday", 1, 2, 1);
-readFromUser("TTQuiz", "Sunday", 2, 4, 2);
-readFromUser("ECEN20Essay", "Thursday", 3, 3, 3);
-readFromUser("StudyJapanese", "Sunday", 1, 5, 4);
-readFromUser("ECEN21Quiz", "Tuesday", 2, 1, 5);
-determineUserFreeTime(1, 1);
-determineUserFreeTime(1, 3);
-determineUserFreeTime(1, 4);
-determineUserFreeTime(1, 5);
-determineUserFreeTime(1, 8);
-determineUserFreeTime(1, 12);
-determineUserFreeTime(1, 13);
-determineUserFreeTime(1, 15);
-determineUserFreeTime(1, 16);
-determineUserFreeTime(2, 1);
-determineUserFreeTime(2, 3);
-determineUserFreeTime(2, 4);
-determineUserFreeTime(2, 5);
-determineUserFreeTime(2, 8);
-determineUserFreeTime(2, 12);
-determineUserFreeTime(2, 13);
-determineUserFreeTime(2, 15);
-determineUserFreeTime(2, 16);
-determineUserFreeTime(4, 1);
-determineUserFreeTime(4, 3);
-determineUserFreeTime(4, 4);
-determineUserFreeTime(4, 5);
-determineUserFreeTime(4, 8);
-determineUserFreeTime(4, 12);
-determineUserFreeTime(4, 13);
-determineUserFreeTime(4, 15);
-determineUserFreeTime(4, 16);
-addTasksToDays();
-//priority();
-printAll();
+// readFromUser("mathhw", "Wednesday", 1, 3, 0);
+// readFromUser("ENGLISH", "Wednesday", 1, 2, 1);
+// readFromUser("TTQuiz", "Sunday", 2, 4, 2);
+// readFromUser("ECEN20Essay", "Thursday", 3, 3, 3);
+// readFromUser("StudyJapanese", "Sunday", 1, 5, 4);
+// readFromUser("ECEN21Quiz", "Monday", 2, 1, 5);
+// determineUserFreeTime(1, 1);
+// determineUserFreeTime(1, 3);
+// determineUserFreeTime(1, 4);
+// determineUserFreeTime(1, 5);
+// determineUserFreeTime(1, 8);
+// determineUserFreeTime(1, 12);
+// determineUserFreeTime(1, 13);
+// determineUserFreeTime(1, 15);
+// determineUserFreeTime(1, 16);
+// determineUserFreeTime(2, 1);
+// determineUserFreeTime(2, 3);
+// determineUserFreeTime(2, 4);
+// determineUserFreeTime(2, 5);
+// determineUserFreeTime(2, 8);
+// determineUserFreeTime(2, 12);
+// determineUserFreeTime(2, 13);
+// determineUserFreeTime(2, 15);
+// determineUserFreeTime(2, 16);
+// determineUserFreeTime(4, 1);
+// determineUserFreeTime(4, 3);
+// determineUserFreeTime(4, 4);
+// determineUserFreeTime(4, 5);
+// determineUserFreeTime(4, 8);
+// determineUserFreeTime(4, 12);
+// determineUserFreeTime(4, 13);
+// determineUserFreeTime(4, 15);
+// determineUserFreeTime(4, 16);
+// priority();
+// addTasksToDays();
+// printAll();
 
 module.exports = {
   displayData,
